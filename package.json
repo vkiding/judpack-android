@@ -1,0 +1,51 @@
+{
+  "name": "judpack-android",
+  "version": "0.0.1",
+  "description": "jud pack android",
+  "bin": {
+    "create": "bin/create"
+  },
+  "main": "bin/templates/cordova/Api.js",
+  "scripts": {
+    "test": "npm run jshint && jasmine-node --color spec/unit",
+    "cover": "istanbul cover --root bin/templates/cordova --print detail node_modules/jasmine-node/bin/jasmine-node -- spec/unit",
+    "test-build": "jasmine-node --captureExceptions --color spec/e2e",
+    "jshint": "node node_modules/jshint/bin/jshint bin && node node_modules/jshint/bin/jshint spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkiding/judpack-android.git"
+  },
+  "keywords": [
+    "jud"
+  ],
+  "author": "vkiding",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vkiding/judpack-android/issues"
+  },
+  "homepage": "https://github.com/vkiding/judpack-android#readme",
+    "dependencies": {
+    "cordova-common": "^1.5.0",
+    "elementtree": "^0.1.6",
+    "nopt": "^3.0.1",
+    "properties-parser": "^0.2.3",
+    "q": "^1.4.1",
+    "shelljs": "^0.5.3"
+  },
+  "bundledDependencies": [
+    "cordova-common",
+    "elementtree",
+    "nopt",
+    "properties-parser",
+    "q",
+    "shelljs"
+  ],
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "jasmine-node": "^1.14.5",
+    "jshint": "^2.6.0",
+    "promise-matchers": "~0",
+    "rewire": "^2.1.3"
+  }
+}
